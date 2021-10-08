@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Vibes&display=swap');
+ html * {
+     box-sizing: border-box;
+
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+.vibes{
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    text-align: center;
+    font-size: 70pt;
+}
+ .nav {
+    font-family: 'Montserrat', sans-serif;
+     width: 80%;
+     margin: auto;
+     font-weight: 600;
+
+     .nav-item {
+         width: 200px;
+         text-align: center;
+     }
+
+     .nav-title {
+         padding: 5px;
+         margin: auto;
+         width: fit-content;
+         height: 30px;
+         box-sizing: border-box;
+         color: black;
+     }
+
+     .nav-title:hover {
+         border-bottom: solid black 2px;
+     }
+
+     .logo {
+         width: 120px;
+         height: 120px;
+     }
+ }
+
+ .section {
+     margin: 20px auto;
+
+     .title-container {
+         border-radius: 2px;
+         padding-left: 5px;
+         padding-right: 0px;
+         transition: all 0.1s ease-in-out;
+         margin: auto;
+         border: solid black 2px;
+
+         .title {
+             font-weight: bold;
+             padding: 10px;
+             margin: auto;
+             background-color: black;
+             color: white;
+         }
+     }
+
+     .title-container:hover {
+         padding-left: 0px;
+         padding-right: 5px;
+     }
+
+     .section-item {
+        position: relative;
+         .section-item-left {
+             border-right: 1px solid black;
+             justify-content: end;
+             padding: 50px;
+             padding-left: 20px;
+             text-align: right;
+         }
+
+         .section-item-right {
+             border-left: 1px solid black;
+             justify-content: start;
+             padding: 50px;
+             padding-right: 20px;
+         }
+
+         .section-item-bullet {
+            position:absolute;
+            left: calc(50% - 10px);
+            top: calc(60px - 10px);
+             width: 20px;
+             height: 20px;
+             border: 2px solid black;
+             border-radius: 100%;
+            background-color: white;
+         }
+     }
+ }

@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
+    {% assets "flex.css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
+    {% assets "general.css" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
+
+
+    <style>
+    </style>
+
+    <style>
+        body {
+            font-family: 'Noto Kufi Arabic', sans-serif;
+            font-family: 'Vibes', cursive;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello there!</h1>
+
+    <div class="flex-column">
+      {% include 'header-nav.html'%}
+        <h1 class = "vibes">Hello مرحبا</h1>
+      <div class = "section flex-column">
+          <div class="title-container">
+              <div class="title">
+                  Education
+                </div>
+          </div>
+          <div class="section-item flex-row">
+              <div class="section-item-left flex-row">Princess Sumaya University for Technology<br>Bsc Computer Science student</div>
+              <div class = "section-item-bullet"></div>
+            <div class="section-item-right flex-row">2018 - current<br>GPA: 82.2</div>
+          </div>
+          <div class="section-item flex-row">
+            <div class="section-item-left flex-row">Jubilee High School<br>Tawjihi</div>
+            <div class = "section-item-bullet"></div>
+          <div class="section-item-right flex-row">2018 - current<br>GPA: 82.2</div>
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>

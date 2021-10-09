@@ -6,7 +6,14 @@
 
  a {
      text-decoration: none;
+     color: black;
  }
+
+ hr{
+    border: 1px solid black;
+    width: 50%;
+    margin-bottom: 0;
+  }
 
 .vibes{
     font-family: 'Noto Kufi Arabic', sans-serif;
@@ -31,6 +38,7 @@
          height: 30px;
          box-sizing: border-box;
          color: black;
+         transition: all .05s ease-in-out;
      }
 
      .nav-title:hover {
@@ -44,7 +52,25 @@
  }
 
  .section {
+     p{
+         margin: 5px 0;
+         color: black;
+         max-width: 350px;
+     }
+     a{
+         &:hover{
+             text-decoration: underline;
+         }
+     }
      margin: 20px auto;
+
+     .section-item-divider{
+        width: 2px;
+        min-width: 2px;
+        background-color: black;
+        min-height: 50px;
+        margin: auto;
+    }
 
      .title-container {
          border-radius: 2px;
@@ -58,6 +84,7 @@
              font-weight: bold;
              padding: 10px;
              margin: auto;
+             font-size: 18pt;
              background-color: black;
              color: white;
          }
@@ -68,32 +95,75 @@
          padding-right: 5px;
      }
 
+
      .section-item {
         position: relative;
+        margin-top: -10px;
+        
+        &:hover{
+            .section-item-bullet{
+                border-width: 8px;
+            }
+        }
+
+        &:last-of-type{
+            .section-item-right,.section-item-left{
+                border-width: 0;
+            }
+        }
          .section-item-left {
+            align-items: flex-end;
              border-right: 1px solid black;
              justify-content: end;
-             padding: 50px;
-             padding-left: 20px;
+             padding-right: 50px;
              text-align: right;
+             padding-left: 30px;
+             padding-bottom: 50px;
+             justify-content: flex-start;
+
          }
 
          .section-item-right {
-             border-left: 1px solid black;
+            border-left: 1px solid black;
              justify-content: start;
-             padding: 50px;
-             padding-right: 20px;
-         }
+             align-items: flex-start;
+             padding-left: 50px;
+             padding-right: 30px;
+             padding-bottom: 50px;
+             justify-content: flex-start;
+
+    
+        }
+    
+
+         .section-item-divider{
+            width: 2px;
+            min-width: 2px;
+            min-height: 100px;
+            height: fit-content;
+        }
 
          .section-item-bullet {
             position:absolute;
             left: calc(50% - 10px);
-            top: calc(60px - 10px);
+            top: 5px;
              width: 20px;
              height: 20px;
              border: 2px solid black;
              border-radius: 100%;
             background-color: white;
+            transition: all .2s ease-in-out;
          }
      }
+ }
+
+ .bold{
+    font-weight: bold;
+ }
+ .big{
+     font-size: 20px;
+ }
+
+ .bullet-point-title:before{
+    content: "<*> ";
  }

@@ -2,52 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
 
-    {% assets "flex.css" %}
-    <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
-    {% assets "general.css" %}
-    <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
+  {% assets "flex.css" %}
+  <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
+  {% assets "general.css" %}
+  <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
 
 
-    <style>
-    </style>
+  <style>
+  </style>
 
-    <style>
-        body {
-            font-family: 'Noto Kufi Arabic', sans-serif;
-            font-family: 'Vibes', cursive;
-            font-family: 'Montserrat', sans-serif;
-        }
-    </style>
+  <style>
+    body {
+      font-family: 'Noto Kufi Arabic', sans-serif;
+      font-family: 'Vibes', cursive;
+      font-family: 'Montserrat', sans-serif;
+    }
+    hr{
+      border: 1px solid black;
+      width: 50%;
+      /* padding-top: 20px; */
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="flex-column">
-      {% include 'header-nav.html'%}
-        <h1 class = "vibes">Hello مرحبا</h1>
-      <div class = "section flex-column">
-          <div class="title-container">
-              <div class="title">
-                  Education
-                </div>
-          </div>
-          <div class="section-item flex-row">
-              <div class="section-item-left flex-row">Princess Sumaya University for Technology<br>Bsc Computer Science student</div>
-              <div class = "section-item-bullet"></div>
-            <div class="section-item-right flex-row">2018 - current<br>GPA: 82.2</div>
-          </div>
-          <div class="section-item flex-row">
-            <div class="section-item-left flex-row">Jubilee High School<br>Tawjihi</div>
-            <div class = "section-item-bullet"></div>
-          <div class="section-item-right flex-row">2018 - current<br>GPA: 82.2</div>
-        </div>
-      </div>
-    </div>
+  <div class="flex-column">
+    {% include 'header-nav.html'%}
+    <h1 class="vibes">Hello مرحبا</h1>
+    {% include 'education-section.html'%}
+    {% include 'education-section.html'%}
+
+
+  </div>
 </body>
 
 </html>

@@ -52,11 +52,16 @@
  }
 
  .section {
-     p{
-         margin: 5px 0;
-         color: black;
-         max-width: 350px;
+     .section-description{
+         margin: auto;
+         max-width: 40%;
+         text-align: center;
+         
+        p{
+            color: black;
+        }
      }
+   
      a{
          &:hover{
              text-decoration: underline;
@@ -79,10 +84,12 @@
          transition: all 0.1s ease-in-out;
          margin: auto;
          border: solid black 2px;
+         width: fit-content;
 
          .title {
+            width: fit-content;
              font-weight: bold;
-             padding: 10px;
+             padding: 5px 10px;
              margin: auto;
              font-size: 18pt;
              background-color: black;
@@ -100,9 +107,18 @@
         position: relative;
         margin-top: -10px;
         
+        p{
+            margin: 5px 0;
+            color: black;
+            max-width: 350px;
+        }
         &:hover{
             .section-item-bullet{
                 border-width: 8px;
+                // left: calc(50% - 15px);
+                // top:0px;
+                // width: 30px;
+                // height: 30px;
             }
         }
 

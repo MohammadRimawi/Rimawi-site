@@ -40,12 +40,14 @@
 
   .section {
     margin: 20px auto; }
-    .section p {
-      margin: 5px 0;
-      color: black;
-      max-width: 350px; }
-      .section a:hover {
-        text-decoration: underline; }
+    .section .section-description {
+      margin: auto;
+      max-width: 40%;
+      text-align: center; }
+      .section .section-description p {
+        color: black; }
+    .section a:hover {
+      text-decoration: underline; }
     .section .section-item-divider {
       width: 2px;
       min-width: 2px;
@@ -58,10 +60,12 @@
         padding-right: 0px;
         transition: all 0.1s ease-in-out;
         margin: auto;
-        border: solid black 2px; }
+        border: solid black 2px;
+        width: fit-content; }
         .section .title-container .title {
+          width: fit-content;
           font-weight: bold;
-          padding: 10px;
+          padding: 5px 10px;
           margin: auto;
           font-size: 18pt;
           background-color: black;
@@ -72,8 +76,12 @@
       .section .section-item {
         position: relative;
         margin-top: -10px; }
-        .section .section-item:hover .section-item-bullet {
-          border-width: 8px; }
+        .section .section-item p {
+          margin: 5px 0;
+          color: black;
+          max-width: 350px; }
+          .section .section-item:hover .section-item-bullet {
+            border-width: 8px; }
         .section .section-item:last-of-type .section-item-right,
         .section .section-item:last-of-type .section-item-left {
           border-width: 0; }

@@ -118,6 +118,45 @@
                 background-color: white;
                 transition: all 0.2s ease-in-out; }
 
+  .biscuit-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto; }
+    .biscuit-container .biscuit-item {
+      position: relative;
+      width: fit-content;
+      padding: 10px 20px;
+      border: solid 1px black;
+      margin: 5px;
+      border-radius: 10px;
+      transition: all 0.1s ease-in-out; }
+      .biscuit-container .biscuit-item:hover {
+        background-color: black;
+        color: white; }
+        .biscuit-container .biscuit-item:hover:before {
+          width: 10px;
+          height: 10px;
+          content: "";
+          background-color: black;
+          position: absolute;
+          bottom: 110%;
+          left: calc(50% - 2px);
+          transform: rotate(45deg); }
+          .biscuit-container .biscuit-item:hover:after {
+            position: absolute;
+            bottom: 120%;
+            left: calc(50% - 60px);
+            content: "Self-tought";
+            text-align: center;
+            background-color: black;
+            min-height: 20px;
+            width: 120px;
+            border-radius: 5px;
+            padding: 10px 5px; }
+
   .bold {
     font-weight: bold; }
 

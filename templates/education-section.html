@@ -1,96 +1,82 @@
+{% for section in sections %}
 <div class="section flex-column">
     <div class="title-container">
       <div class="title">
-        Education
+        {{section['title']}}
       </div>
     </div>
     <hr>
-    <!-- <div class="section-description">
-        <p >
-            A highly disciplined and hard-working individual looking for an
-            internship in backend or other related areas of software
-            development in a well established organization.
+    {% if section['description'] %}
+    <div class="section-description">
+        <p>
+           {{section['description']}}
         </p>
-    </div>
-    <hr> -->
+      </div>
+      {% if section['items']!= {}  %}
+      <hr>
+      {% endif %}
+    {% endif %}
+    {% if section['items'] != {} %}
     <div class=" section-item-divider"></div>
 
-
+      {% for topic in section['items'] %}
     <div class="section-item flex-row">
 
       <div class="section-item-left flex-column">
-        <p class="bold big">
-          <a href="https://www.psut.edu.jo">
-            Princess Sumaya University for Technology
-          </a>
+        
+        {% for item in topic['left'] %}
+        <p class="{% for class in item['classes'] %} {{class}} {% endfor %}">
+          {% if item['url'] %}<a href="{{item['url']}}">{% endif %}
+            {{item["text"]}}
+        {% if item['url'] %}</a>{% endif %}
         </p>
-
-        <p>
-          Bachelor in Computer Science
-        </p>
-
-  
+        {% endfor %}
       </div>
+
       <div class="section-item-bullet"></div>
       <div class="section-item-right flex-column">
-        <p>
 
-          2018 August - Expected 2023 January
+        {% for item in topic['right'] %}
+        <p class="{% for class in item['classes'] %} {{class}} {% endfor %}">
+          {% if item['url'] %}<a href="{{item['url']}}">{% endif %}
+            {{item["text"]}}
+        {% if item['url'] %}</a>{% endif %}
+        </p>
+        {% endfor %}
 
-
-        </p>
-        <p>
-          GPA: Very good with 82.2
-        </p>
-        <p>
-            Sixth on batch
-        </p>
-        <p>
-            - Board member at ACM Student chapter. 
-        </p>
-        <p>
-
-            - Instructor at ACM Student Chapter 
-        </p>
-            
-        <p>
-            - 3rd place at on campus Hult Prize 
-
-        </p>
-        <p>
-            - Design Team lead of TEDx PSUT  
-
-        </p>
-        <p class="bold bullet-point-title">Project #1</p>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure optio fuga eveniet explica.</p>
-        <p class="bold bullet-point-title">TEDx PSUT Design lead</p>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicis minus impedit.</p>
-        
       </div>
-
     </div>
-    <div class="section-item flex-row">
-      <div class="section-item-left flex-column">
-        <p class="bold big">
-          <a href="http://www.jubilee.edu.jo/">
-            Jubilee High School
-          </a>
-        </p>
-        <p>
-          Tawjihi
-        </p>
+    {% endfor %}
+    {% endif %}
+    
+  </div>
+
+  {% if section['title'].lower() == "education" %}
+  <div class="section flex-column">
+
+    <div class="title-container">
+      <div class="title">
+        Technical skills
       </div>
-      <div class="section-item-bullet"></div>
-      <div class="section-item-right flex-column">
-        <p>
-          2014 - 2018
-        </p>
-        <p class="bold bullet-point-title">Project #1</p>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur iure optio fuga eveniet explica.</p>
-        <p class="bold bullet-point-title">TEDx PSUT Design lead</p>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicis minus impedit.</p>
-        
-      </div>
+    </div>
+    <!-- <hr> -->
+    <br>
+    <div class ="biscuit-container flex-row flex-wrap">
+      {% for item in programming_skills %}
+      <div class="biscuit-item">{{item['name']}}</div>
+      {% endfor %}
     </div>
     
   </div>
+  {% endif %}
+
+  {% if section['title'].lower() == "projects" %}
+  <div class="section flex-column">
+
+    {% include 'posts_cards_slider.html'%}
+
+  </div>
+  {% endif %}
+
+
+  {% endfor %}

@@ -1,0 +1,365 @@
+
+<style>
+
+
+
+
+
+body {
+    position: relative;
+    margin: 0;
+    /* height: 2000px; */
+}
+
+
+
+.item {
+    position: relative;
+    margin: auto;
+    padding-top: 30px;
+    width: 40%;
+    max-width: 100px;
+}
+
+
+
+
+
+.card-title{
+    font-size:16px !important;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    #main{
+        width: 100%;
+        font-size: 12px;
+    }
+    .item {
+        width: 100%;
+    }
+    .previous,.next{
+        width: 30px;
+    }
+
+    .card-descriptive{
+        width: 300px;
+    }
+    .card-brief{
+      
+
+        width: 200px;
+        margin: 30px 3px;
+    }
+    
+}
+
+
+
+
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+
+
+
+
+
+*{
+    --brief-card-width : 200px;
+    --descriptive-card-width : 350px;
+    --brief-card-height : 315px;
+    --brief-card-drop : 120px;
+    --card-button-width : 30px;
+}
+.card {
+ 
+    transition: ease-in-out 200ms;
+    transform-origin: bottom;
+
+    border: 2px solid rgb(0, 0, 0);
+    height:var(--brief-card-height);
+
+    background-color:rgb(255, 255, 255);
+    margin: 0 8px;
+    flex-shrink: 0;
+    border-radius:4px;
+    overflow:hidden;
+    /* box-shadow: 0px 4px 9px -4px rgba(0, 0, 0, 0.43);
+    -webkit-box-shadow: 0px 4px 9px -4px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 4px 9px -4px rgba(0, 0, 0, 0.43); */
+    position:relative;
+}
+
+.card-brief{
+    width:var(--brief-card-width) !important;
+}
+
+.card-descriptive{
+    width:var(--descriptive-card-width) !important;
+}
+.slider-button{
+    transition: all .5s ease;
+    filter:opacity(0);
+    height:100%;
+
+    background-color:rgba(194, 194, 194, .6);
+    width:var(--card-button-width);
+    cursor:pointer;
+}
+.slider-button span {
+    position: absolute;
+    top: 42%;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    color: white;
+}
+.slider:hover .slider-button{
+    filter:opacity(100);        
+}
+
+.slider-button.left{
+    position:absolute;
+    left: calc(-1*var(--card-button-width));
+    z-index:1;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.slider:hover .slider-button.left{    
+    left:0;
+}
+
+
+.slider:hover .slider-button.right{
+    right:0;
+}
+
+.slider-button.right{
+    right:calc(-1*var(--card-button-width));
+    position:absolute;
+    border-radius: 10px 0px 0px 10px;
+}
+.slider{
+    overflow-x: hidden;
+    overflow-y:visible;
+    position: relative;
+    width:100%;
+    max-width: 1500px;
+    margin:    auto;
+    height:calc(70px + var(--brief-card-height));
+   
+    justify-content: space-between;
+}
+.slider-body{
+    height: calc(40px + var(--brief-card-height));
+    overflow: hidden;
+    overflow-x: scroll;
+    flex-flow: nowrap;
+    padding-bottom: 30px;
+    width: 95%;
+    /* max-width:500px; */
+    margin:auto;
+    padding-bottom: 0px;
+    padding-top: 12px;
+}
+.slider-body>div{
+   display:inline-block; 
+}
+
+.card-image{
+    width:100%;
+    height:var(--brief-card-height);
+    background-color: rgb(255, 255, 255);
+    transition: all .7s ease;
+}
+.card-image img{
+    background-color: black;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.card-content{
+    
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0;
+    justify-content:space-between;
+    width:100%;
+    height:270px;
+    /* direction:rtl; */
+    transition: all .6s ease;
+    position: absolute;
+    bottom: calc(-1*var(--brief-card-drop));
+    /* color:white; */
+    /* background: rgba(0, 0, 0, 0.199); */
+
+    /* background: rgb(0,0,0); */
+    background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,.3) 20%, rgba(0,0,0,.9) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,.3) 20%, rgba(0,0,0,.9) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%,  rgba(0,0,0,.3) 20%,rgba(0,0,0,.9) 100%);
+    background-size:1px 270px;  
+
+}
+
+.card:hover .card-content,.card:last-child .card-content{
+    bottom: 0;
+    background-position:0px;  
+  
+    /* background: rgb(0,0,0); */
+  
+    /* background: rgba(0, 0, 0, 0.644); */
+
+    /* box-shadow: 0px -4px 9px -4px rgba(0, 0, 0, 0.83); */
+
+}
+
+
+.card:hover .card-image,.card:last-child .card-image{
+    /* height:30px; */
+    filter: blur(2px);
+}
+
+.card:hover{
+    transform: scale(1.04);
+    /* border-width: 3px; */
+}
+
+.slider-card-title{
+    font-size: 24px;
+    padding:5px;
+    max-height: 140px;
+    /* overflow: hidden; */
+    color:white;
+    font-weight: bold;
+    height: fit-content;
+}
+
+.slider-card-title p{
+    margin: 2px;
+    
+}
+
+
+.card-button{
+    background-color: black;
+    color:white;
+    display: block;
+    width: fit-content;
+    padding: 5px 30px;
+    margin-bottom:14px;
+    /* position:absolute; */
+    /* right: 20px; */
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+
+.card-button:hover{
+    /* background-color: #2b4e8f; */
+}
+
+.card-biscuit{
+    font-size: 12px;
+    color:black;
+    background-color:yellow;
+    font-weight: 500;
+    border-radius: 4px;
+    padding: 2px 4px;
+    margin-bottom: 4px;
+
+    /* display: block; */
+    width: fit-content;
+    margin: 0 2px;
+    margin-bottom: 5px;
+}
+.slider-card-description {
+    height: fit-content;
+    font-size: 14px;
+    overflow: hidden;
+    color: white;
+    padding: 0px 5px 5px 5px;
+    /* margin-bottom: 10px; */
+}
+
+
+.card-languages{
+    margin-top: 35px;
+    transition: all .3s ease-in-out;
+    line-height:4;
+}
+
+.card:hover .card-languages,.card:last-child .card-languages
+{
+    margin-top: 5px;
+    line-height:2;
+}
+
+</style>
+
+
+    <div class='flex-row slider'>
+        <div class='slider-button left' onclick="previous(this)"><span><</span></div>
+        <div class='flex-row slider-body shuffle'>
+            {% for card in cards %}
+            <div class="card  card-descriptive  flex-column">
+                <div class= "card-image">
+                    <!-- <img src="{{ url_for('static', filename = card.image_url)}}" alt="" onerror="this.style.display='none'">  TODO Add Alt -->
+                    <img src="{{url_for('static', filename = 'assets/images/'+card['image_url'])}}" alt="" onerror="this.style.display='none'"> <!-- TODO Add Alt-->
+    
+                </div>
+                
+                <div class= "card-content flex-column">
+                    <div class= "flex-column">
+                    <div class="slider-card-title">
+                        <p>
+                            {% autoescape false %} 
+                            {{card['title']}} 
+                            {% endautoescape %} 
+                        </p>
+                        <span class="card-biscuit" style="background-color: {% if card['type'].lower() == 'personal project' %} yellow {% else %} orange {% endif %}; color: {% if card['type'].lower() == 'personal project' %} black {% else %} black {% endif %};">
+                            {{card['type'].capitalize()}}
+                        </span>
+                      
+                    </div>
+                   
+                    <div class="slider-card-description">
+                        {% autoescape false %} 
+                        {{card['description']}} 
+                        {% endautoescape %} 
+                    </div>
+                    <div class="card-languages">
+
+                        {% for item in card['languages'] %}
+                        <span class="card-biscuit" style="background-color:white; color:black;" >{{item}}</span>
+                        {% endfor %}
+                    </div>
+                    </div>
+                    <div class="flex-row flex-h-end">
+                        <a href = "#" class="card-button" >Go to project</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class='slider-button right' onclick="next(this)"><span>></span></div>
+    
+    </div>

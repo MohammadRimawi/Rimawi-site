@@ -1,75 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Vibes&display=swap');
- html * {
-     box-sizing: border-box;
 
- }
+html * {
+    box-sizing: border-box;
 
- a {
-     text-decoration: none;
-     color: black;
- }
+}
 
- hr{
+a {
+    text-decoration: none;
+    color: black;
+}
+
+hr {
     border: 1px solid black;
     width: 50%;
     margin-bottom: 0;
-  }
+}
 
-.vibes{
+.vibes {
     font-family: 'Noto Kufi Arabic', sans-serif;
     text-align: center;
     font-size: 70pt;
 }
- .nav {
+
+.nav {
     font-family: 'Montserrat', sans-serif;
-     width: 80%;
-     margin: auto;
-     font-weight: 600;
+    width: 80%;
+    margin: auto;
+    font-weight: 600;
 
-     .nav-item {
-         width: 200px;
-         text-align: center;
-     }
+    .nav-item {
+        width: 200px;
+        text-align: center;
+    }
 
-     .nav-title {
-         padding: 5px;
-         margin: auto;
-         width: fit-content;
-         height: 30px;
-         box-sizing: border-box;
-         color: black;
-         transition: all .05s ease-in-out;
-     }
+    .nav-title {
+        padding: 5px;
+        margin: auto;
+        width: fit-content;
+        height: 30px;
+        box-sizing: border-box;
+        color: black;
+        transition: all .05s ease-in-out;
+    }
 
-     .nav-title:hover {
-         border-bottom: solid black 2px;
-     }
+    .nav-title:hover {
+        border-bottom: solid black 2px;
+    }
 
-     .logo {
-         width: 120px;
-         height: 120px;
-     }
- }
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+}
 
- .section {
-     .section-description{
-         margin: auto;
-         max-width: 40%;
-         text-align: center;
-         
-        p{
+.section {
+    .section-description {
+        margin: auto;
+        max-width: 40%;
+        text-align: center;
+
+        p {
             color: black;
         }
-     }
-   
-     a{
-         &:hover{
-             text-decoration: underline;
-         }
-     }
-     margin: 20px auto;
+    }
 
-     .section-item-divider{
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    margin: 20px auto;
+
+    .section-item-divider {
         width: 2px;
         min-width: 2px;
         background-color: black;
@@ -77,43 +80,44 @@
         margin: auto;
     }
 
-     .title-container {
-         border-radius: 2px;
-         padding-left: 5px;
-         padding-right: 0px;
-         transition: all 0.1s ease-in-out;
-         margin: auto;
-         border: solid black 2px;
-         width: fit-content;
+    .title-container {
+        border-radius: 2px;
+        padding-left: 5px;
+        padding-right: 0px;
+        transition: all 0.1s ease-in-out;
+        margin: auto;
+        border: solid black 2px;
+        width: fit-content;
 
-         .title {
+        .title {
             width: fit-content;
-             font-weight: bold;
-             padding: 5px 10px;
-             margin: auto;
-             font-size: 18pt;
-             background-color: black;
-             color: white;
-         }
-     }
+            font-weight: bold;
+            padding: 5px 10px;
+            margin: auto;
+            font-size: 18pt;
+            background-color: black;
+            color: white;
+        }
+    }
 
-     .title-container:hover {
-         padding-left: 0px;
-         padding-right: 5px;
-     }
+    .title-container:hover {
+        padding-left: 0px;
+        padding-right: 5px;
+    }
 
 
-     .section-item {
+    .section-item {
         position: relative;
         margin-top: -10px;
-        
-        p{
+
+        p {
             margin: 5px 0;
             color: black;
             max-width: 350px;
         }
-        &:hover{
-            .section-item-bullet{
+
+        &:hover {
+            .section-item-bullet {
                 border-width: 8px;
                 // left: calc(50% - 15px);
                 // top:0px;
@@ -122,64 +126,119 @@
             }
         }
 
-        &:last-of-type{
-            .section-item-right,.section-item-left{
+        &:last-of-type {
+
+            .section-item-right,
+            .section-item-left {
                 border-width: 0;
             }
         }
-         .section-item-left {
+
+        .section-item-left {
             align-items: flex-end;
-             border-right: 1px solid black;
-             justify-content: end;
-             padding-right: 50px;
-             text-align: right;
-             padding-left: 30px;
-             padding-bottom: 50px;
-             justify-content: flex-start;
+            border-right: 1px solid black;
+            justify-content: end;
+            padding-right: 50px;
+            text-align: right;
+            padding-left: 30px;
+            padding-bottom: 50px;
+            justify-content: flex-start;
 
-         }
-
-         .section-item-right {
-            border-left: 1px solid black;
-             justify-content: start;
-             align-items: flex-start;
-             padding-left: 50px;
-             padding-right: 30px;
-             padding-bottom: 50px;
-             justify-content: flex-start;
-
-    
         }
-    
 
-         .section-item-divider{
+        .section-item-right {
+            border-left: 1px solid black;
+            justify-content: start;
+            align-items: flex-start;
+            padding-left: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            justify-content: flex-start;
+
+
+        }
+
+
+        .section-item-divider {
             width: 2px;
             min-width: 2px;
             min-height: 100px;
             height: fit-content;
         }
 
-         .section-item-bullet {
-            position:absolute;
+        .section-item-bullet {
+            position: absolute;
             left: calc(50% - 10px);
             top: 5px;
-             width: 20px;
-             height: 20px;
-             border: 2px solid black;
-             border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+            border-radius: 100%;
             background-color: white;
             transition: all .2s ease-in-out;
-         }
-     }
- }
+        }
+    }
+}
 
- .bold{
+.biscuit-container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+max-width: 600px;
+margin: auto;
+    .biscuit-item {
+        position: relative;
+        width: fit-content;
+        padding: 10px 20px;
+        // font-weight: bold;
+        border:solid 1px black;
+        margin: 5px;
+        border-radius: 10px;
+        transition: all .1s ease-in-out;
+        &:hover{
+            background-color: black;
+            color: white;
+            &:before{
+          
+                width: 10px;
+                height: 10px;
+                content: "";
+                background-color: black;
+                position: absolute;
+                bottom: 110%;
+                left:calc(50% - 2px);
+
+                transform: rotate(45deg);
+            }
+            &:after{
+                position: absolute;
+                bottom: 120%;
+                left: calc(50% - 60px);
+                content: "Self-tought";
+                text-align: center;
+                background-color: black;
+                min-height: 20px;
+                width: 120px;
+                border-radius: 5px;
+                padding: 10px 5px;
+                // height: 20px;
+            }
+        }
+      
+    }
+
+    
+}
+
+.bold {
     font-weight: bold;
- }
- .big{
-     font-size: 20px;
- }
+}
 
- .bullet-point-title:before{
+.big {
+    font-size: 20px;
+}
+
+.bullet-point-title:before {
     content: "<*> ";
- }
+}

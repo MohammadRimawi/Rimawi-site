@@ -1,3 +1,3 @@
 # Rimawi-site
 
-This is my own resuma website.
+This is my own resume website.

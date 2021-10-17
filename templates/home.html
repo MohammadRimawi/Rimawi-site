@@ -12,7 +12,8 @@
   {% assets "general.css" %}
   <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
   {% assets "slider.js" %}<script src="{{ ASSET_URL }}"></script>{% endassets %}
-
+  {% assets "font-awesome.css" %}
+  <link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
 
   <style>
   </style>
@@ -29,10 +30,61 @@
 
 <body onload="shuffle()">
 
-  <div class="flex-column">
+  <div class="main flex-column">
     {% include 'header-nav.html'%}
+    <hr>
+    <div class="flex-column personal-info" id="whoami">
+        <div class = "flex-row justify-center">
+          <div class="my-picture">
+            <img class="logo" src="static/assets/images/logo.svg">
+            <img class="my-image" src="static/assets/images/MeInPink.png">
+          </div>
+        </div>
+        <div class="flex-column ">
+          <div class="flex-row justify-center">
+            <span class = "my-name-ar">محمد الريماوي</span>
+          </div>
+            <div class="flex-row justify-center">
+              <span class = "my-name-en">Mohammad Rimawi</span>
+            </div>
+            <div class="flex-row justify-center">
+              <span class = "title">Computer Science Student</span>
+            </div>
+        </div>
+        <!-- <hr> -->
+        <div class="flex-row justify-center contacts-icons">
+          <a target = "_blank" href="https://www.linkedin.com/in/mohammadrimawi/" >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a target = "_blank" href="https://github.com/MohammadRimawi" >
+            <i class="fab fa-github"></i>
+          </a>
+          <a target = "_blank" href="https://www.facebook.com/Rimawizz/" >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+        <div class="flex-column flex-v-center contacts-lines">
+         
+          <a href="mailto:mohrimawiz@gmail.com" >
+            MohRimawiz@gmail.com
+          </a>
+          <a href="tel:+962798168424" >
+            +962 79 816 8424
+          </a>
 
-    <h1 class="vibes">Hello مرحبا</h1>
+        </div>
+        <!-- <hr>
+        <div class="flex-row justify-center">
+          <div class="pattern" >
+            <img src="static/assets/images/Asset 1.svg">
+          </div>
+        </div> -->
+
+     
+
+
+
+    </div>
 
     {% include 'education-section.html'%}
 

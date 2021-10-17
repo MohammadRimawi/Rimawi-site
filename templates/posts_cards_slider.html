@@ -5,11 +5,8 @@
 
 
 
-body {
-    position: relative;
-    margin: 0;
-    /* height: 2000px; */
-}
+
+
 
 
 
@@ -98,7 +95,7 @@ body {
     border: 2px solid rgb(0, 0, 0);
     height:var(--brief-card-height);
 
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(0, 0, 0);
     margin: 0 8px;
     flex-shrink: 0;
     border-radius:4px;
@@ -188,7 +185,7 @@ body {
 .card-image{
     width:100%;
     height:var(--brief-card-height);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(61, 7, 58);
     transition: all .7s ease;
 }
 .card-image img{
@@ -196,6 +193,7 @@ body {
     width:100%;
     height:100%;
     object-fit: cover;
+    filter: brightness(0.4);
 }
 .card-content{
     
@@ -224,11 +222,6 @@ body {
     bottom: 0;
     background-position:0px;  
   
-    /* background: rgb(0,0,0); */
-  
-    /* background: rgba(0, 0, 0, 0.644); */
-
-    /* box-shadow: 0px -4px 9px -4px rgba(0, 0, 0, 0.83); */
 
 }
 
@@ -245,7 +238,7 @@ body {
 
 .slider-card-title{
     font-size: 24px;
-    padding:5px;
+    padding: 5px 0px;
     max-height: 140px;
     /* overflow: hidden; */
     color:white;
@@ -260,21 +253,30 @@ body {
 
 
 .card-button{
-    background-color: black;
+
+    border:#025887 solid 1px;
+    background-color: #0258873b;
     color:white;
-    display: block;
-    width: fit-content;
-    padding: 5px 30px;
+    /* display: block; */
+    width: 100%;
+    padding: 5px;
+    margin: 0px 5px;
     margin-bottom:14px;
-    /* position:absolute; */
-    /* right: 20px; */
+    height: 40px;
     border-radius: 4px;
-    font-size: 14px;
+    text-align: center;
+    font-size: 12px;
     transition: all 0.5s ease;
 }
 
+.card-button img{
+    width:30px;
+    height: 30px;
+
+
+}
 .card-button:hover{
-    /* background-color: #2b4e8f; */
+    background-color: #01486f;
 }
 
 .card-biscuit{
@@ -313,6 +315,65 @@ body {
     line-height:2;
 }
 
+
+@media only screen and (max-width: 750px) {
+
+    *{
+        --brief-card-width : 200px;
+        --descriptive-card-width : 250px;
+        --brief-card-height : 315px;
+        --brief-card-drop : 90px;
+        --card-button-width : 30px;
+    }
+    .slider-body{
+        /* margin: -5px; */
+        width:100%
+    }
+    .slider{
+        margin: 0px -2.5%;
+        width:105%;
+    }
+    .slider-card-description {
+    font-size: 14px;
+    padding: 0px 2px 2px 2px;
+    }   
+    .card-languages{
+        margin-top: 65px;
+    }
+
+    .slider-card-title{
+        font-size: 20px;
+        padding: 5px 0px;
+        max-height: 140px;
+        color:white;
+        font-weight: bold;
+        height: fit-content;
+    }
+
+    .card-content{
+        padding:0 15px;
+    }
+
+    .card .card-content,.card:last-child .card-content{
+        bottom: 0;
+        background-position:0px;  
+
+    }
+
+
+    .card .card-image,.card:last-child .card-image{
+        /* height:30px; */
+        filter: blur(2px);
+    }
+
+    .card .card-languages,.card:last-child .card-languages
+    {
+        margin-top: 5px;
+        line-height:2;
+    }
+
+
+}
 </style>
 
 
@@ -320,11 +381,12 @@ body {
         <div class='slider-button left' onclick="previous(this)"><span><</span></div>
         <div class='flex-row slider-body shuffle'>
             {% for card in cards %}
+            
             <div class="card  card-descriptive  flex-column">
                 <div class= "card-image">
                     <!-- <img src="{{ url_for('static', filename = card.image_url)}}" alt="" onerror="this.style.display='none'">  TODO Add Alt -->
-                    <img src="{{url_for('static', filename = 'assets/images/'+card['image_url'])}}" alt="" onerror="this.style.display='none'"> <!-- TODO Add Alt-->
-    
+                    <img src="{{url_for('static', filename = 'assets/images/'+card['image_url'])}}" alt="" onerror="this.style.display='none'"> 
+                    
                 </div>
                 
                 <div class= "card-content flex-column">
@@ -353,13 +415,29 @@ body {
                         {% endfor %}
                     </div>
                     </div>
-                    <div class="flex-row flex-h-end">
-                        <a href = "#" class="card-button" >Go to project</a>
+                    <div class="flex-row flex-h-end justify-stretch">
+                        {% if card['github'] != [] %}
+                        {% for item in card['github'] %}
+                         {% if item['url'] != "" %}
+                            <a target="_blank" href = "{{item['url']}}" class="card-button" >
+                                <svg height="30" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="30" data-view-component="true">
+                                <path fill="#fff" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg></a>
+                            {% endif %}
+                        {% endfor %}
+                        {% endif %}
+                        {% if card['youtube'] != "" %}
+                        <a target="_blank" href = "{{card['youtube']}}" class="card-button" ><i class="fab fa-youtube" style="font-size:25px;"></i></a>
+                        {% endif %}
+                        {% if card['url'] != "" %}
+                        <a target="_blank" href = "{{card['url']}}" class="card-button" ><img src="static/assets/images/Globe_icon_4.svg"></a>
+                        {% endif %}
                     </div>
+                    
                 </div>
             </div>
             {% endfor %}
         </div>
         <div class='slider-button right' onclick="next(this)"><span>></span></div>
-    
+
     </div>

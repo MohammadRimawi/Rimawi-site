@@ -1,10 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Vibes&display=swap');
 
-html * {
-    box-sizing: border-box;
 
+@font-face {
+    font-family: "The_Sans_Arabic";
+    src: url("../assets/fonts/TheSansPlain.ttf");
 }
 
+@font-face {
+    font-family: "The_Sans_Arabic";
+    src: url("../assets/fonts/TheSansBold.otf");
+    font-weight: bold;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+html * {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+
+$left-section-width:50%;
 a {
     text-decoration: none;
     color: black;
@@ -19,13 +36,14 @@ hr {
 .vibes {
     font-family: 'Noto Kufi Arabic', sans-serif;
     text-align: center;
-    font-size: 70pt;
+    // font-size: 0pt;
 }
 
 .nav {
     font-family: 'Montserrat', sans-serif;
     width: 80%;
     margin: auto;
+    margin-bottom: 30px;
     font-weight: 600;
 
     .nav-item {
@@ -70,7 +88,7 @@ hr {
         }
     }
 
-    margin: 20px auto;
+    padding: 20px 0;
 
     .section-item-divider {
         width: 2px;
@@ -88,6 +106,8 @@ hr {
         margin: auto;
         border: solid black 2px;
         width: fit-content;
+        box-sizing: border-box !important;
+        
 
         .title {
             width: fit-content;
@@ -97,6 +117,7 @@ hr {
             font-size: 18pt;
             background-color: black;
             color: white;
+            margin: -2px;
         }
     }
 
@@ -131,6 +152,7 @@ hr {
             .section-item-right,
             .section-item-left {
                 border-width: 0;
+                padding-bottom: 20px;
             }
         }
 
@@ -144,6 +166,10 @@ hr {
             padding-bottom: 50px;
             justify-content: flex-start;
 
+            .sub-item{
+                padding-right: 25px;
+            }
+
         }
 
         .section-item-right {
@@ -155,6 +181,12 @@ hr {
             padding-bottom: 50px;
             justify-content: flex-start;
 
+            .sub-item{
+                padding-left: 0px;
+            }
+            .sub-item + .sub-item{
+                padding-left: 30px;
+            } 
 
         }
 
@@ -196,10 +228,17 @@ margin: auto;
         margin: 5px;
         border-radius: 10px;
         transition: all .1s ease-in-out;
+
+        &:after,&:before{
+            opacity: 0;
+ 
+            transition: all .1s ease-in-out;
+        }
         &:hover{
             background-color: black;
             color: white;
             &:before{
+                opacity: 1;
           
                 width: 10px;
                 height: 10px;
@@ -212,10 +251,12 @@ margin: auto;
                 transform: rotate(45deg);
             }
             &:after{
+
+                opacity: 1;
                 position: absolute;
                 bottom: 120%;
                 left: calc(50% - 60px);
-                content: "Self-tought";
+                content: attr(data-type);
                 text-align: center;
                 background-color: black;
                 min-height: 20px;
@@ -241,4 +282,295 @@ margin: auto;
 
 .bullet-point-title:before {
     content: "<*> ";
+}
+.italic{
+    font-style: italic;
+}
+
+body{
+    padding-top: 20px;
+}
+
+.personal-info{
+    .contacts-icons{
+        padding-top: 10px;
+        a{   
+            font-size: 20px;
+            padding-top: 5px;
+            text-align: center;
+            width: 35px;
+            height: 35px;
+            border:2px solid black;
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+            margin: 5px 3px;
+            
+            
+            &:hover{
+                color:white;
+                background-color: black;
+            }
+        }
+    }
+        
+    .contacts-lines{
+        margin-top: 10px;
+        a{
+            margin: 5px 0px;
+        }
+    }
+    margin: 40px 0px;
+    .my-picture{
+        max-width: 300px;
+        max-height: 300px;
+
+        width: 30vw;
+        height: 30vw;
+
+        min-width: 170px;
+        min-height: 170px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 100%;
+        img{
+            position: absolute;
+            width: 100%;
+        }
+        
+        .my-image{
+            left: -4%;
+            top: -10%;
+            padding: 20px;
+            transition: all .3s ease-in-out;
+            width: 120%;
+            // &:hover{
+            //     padding: 30px;
+            // }
+        }
+        
+    }
+    .my-name-ar{
+        margin-bottom: -14px;
+        font-family: 'The_Sans_Arabic', sans-serif;
+        font-weight: bold;
+        font-size:52px;
+    }
+    .my-name-en{
+        
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+
+        // font-size:1.8vw;
+        // width: 50vw;
+    }
+    .title{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 4px 7px ;
+        background-color: black;
+        color: white;
+    }
+    .pattern{
+        width: 40vw;
+        height: 13vw;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+
+   
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    body{
+
+        margin: auto !important;
+        width:95% !important;
+        display: block !important;
+        height: 100% !important;
+        
+    }
+    .main{
+        margin: auto;
+        width: 100%;
+    }
+
+
+
+    .nav {
+        width: 90%;
+        font-weight: 600;
+        .nav-item {
+            width: 100px;
+        }
+        .nav-title {
+            font-size: 10px;
+            white-space: nowrap;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+
+    hr {
+        height: 0;
+        border-width: 0;
+        border-bottom-width: 2px;
+        box-sizing: content-box;
+        width: 80%;
+    }
+    
+
+.section {
+    font-size: 12px;
+    .section-description {
+        font-size: 14px;
+        max-width: 90%;   
+    }
+
+
+    margin: 20px auto;
+    
+    .section-item-divider {
+        width: 2px;
+        background-color: black;
+        min-width: 2px;
+        min-height: 50px;
+        position: relative;
+        margin: 0;
+        
+       
+        left:  calc( #{$left-section-width} - 1px);
+    }
+
+    .title-container {
+        .title {
+            font-size: 18px;
+        }
+    }
+
+
+
+    .section-item {
+
+
+        p {
+            margin: 5px 0;
+            color: black;
+            max-width: 350px;
+        }
+
+        &:hover {
+            .section-item-bullet {
+                border-width: 8px;
+            }
+        }
+
+        &:last-of-type {
+
+            .section-item-right,
+            .section-item-left {
+                border-width: 0;
+                padding-bottom: 20px;
+            }
+        }
+
+        .section-item-left {
+            max-width: $left-section-width;
+            padding-right: 20px;
+            padding-left: 5px;
+            .sub-item{
+                padding-right: 10px;
+            }
+
+        }
+
+        .section-item-right {
+
+            padding-left: 20px;
+            padding-right: 5px;
+ 
+            .sub-item{
+                
+                padding-left: 0px;
+            }
+            .sub-item + .sub-item{
+                padding-left: 15px;
+            } 
+
+        }
+
+        .bullet-point-title{
+            font-size: 10px;
+        }
+        .section-item-bullet {
+            left: calc(#{$left-section-width} - 10px);
+        }
+    }
+
+    
+}
+
+.big {
+    font-size: 12px;
+}
+.italic{
+    font-size: 10px;
+}
+
+.personal-info{
+
+    .my-name-ar{
+        margin-bottom: -1vw;
+ 
+        font-size:5vw;
+    }
+    .my-name-en{
+        
+
+        font-size:3vw;
+    }
+    .title{
+
+        font-size: 1.5vw;
+        padding: 4px 10px ;
+
+     
+    }
+
+    .pattern{
+        width: 62vw;
+        height: 20vw;
+        overflow: hidden;
+        position: relative;
+        img{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    .contacts-icons{
+
+        a{   
+            font-size: 15px;
+            padding-top: 3px;
+            text-align: center;
+            width: 25px;
+            height: 25px;
+            
+        }
+    }
+
+    
+    
+}
 }

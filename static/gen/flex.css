@@ -78,6 +78,10 @@
       justify-content: center;
   }
 
+  .justify-stretch {
+    justify-content: stretch;
+}
+
 
   .justify-space-between {
       justify-content: space-between;

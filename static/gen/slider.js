@@ -124,7 +124,7 @@ function shuffle(){
             next(sliders[i],0);
         }
         
-    },7000);
+    },15000);
 }
 
 

@@ -419,7 +419,8 @@ def index():
             "type": "Personal project",
             "languages": ["PHP", "MySQL", "HTML", "CSS", "Javascipt", "Bootstrap"],
             "github": [],
-            "url": "https://psutsc.acm.org"
+            "url": "https://psutsc.acm.org",
+            "youtube":""
         }, {
             "title": "Adobe After effects video automation",
             "description": "A platform for Arabian poets A platform for Arabian poets",

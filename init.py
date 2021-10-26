@@ -175,7 +175,7 @@ def index():
                 {
                     "left": [{
                             "text": "Codablity",
-                            #"url": "https://psutsc.acm.org",
+                            "url": "http://www.codability.net/",
                             "classes": ["bold", "big"],
                         },
                         {
@@ -570,7 +570,7 @@ def index():
     }, {
         "title": "Bing Daily wallpaper",
         # "description": "A platform for Arabian poets A platform for Arabian poets",
-        "image_url": "",
+        "image_url": "bing.jpg",
         "type": "Personal project",
         "languages": ["Python", "Bash"],
         "github": [{
@@ -589,7 +589,7 @@ def index():
             "type": "Project",
             "url": "https://github.com/MohammadRimawi/Rimawi-site"
         }],
-        "url": "",
+        "url": "https://Mohammad.Rimawi.me",
         "youtube": ""
     }, ]
 

@@ -138,6 +138,9 @@ hr {
         }
 
         &:hover {
+            .grey{
+                color: black !important;
+            }
             .section-item-bullet {
                 border-width: 8px;
                 // left: calc(50% - 15px);
@@ -290,6 +293,15 @@ margin: auto;
     &:hover{
         color: black !important;
     }
+}
+
+.section-item a[href]:after{
+    
+    font-family: 'Font Awesome 5 Free';
+    // padding: 0 3px;
+    font-size: 14px;
+    font-weight: bold;
+    content: " \f35d ";
 }
 
 .bullet-point-title:before {

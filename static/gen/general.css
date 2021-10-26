@@ -95,8 +95,10 @@
           margin: 5px 0;
           color: black;
           max-width: 350px; }
-          .section .section-item:hover .section-item-bullet {
-            border-width: 8px; }
+          .section .section-item:hover .grey {
+            color: black !important; }
+            .section .section-item:hover .section-item-bullet {
+              border-width: 8px; }
         .section .section-item:last-of-type .section-item-right,
         .section .section-item:last-of-type .section-item-left {
           border-width: 0;
@@ -199,79 +201,85 @@
           .grey:hover {
             color: black !important; }
 
-  .bullet-point-title:before {
-    content: "<*> "; }
+  .section-item a[href]:after {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 14px;
+    font-weight: bold;
+    content: " "; }
 
-    .italic {
-      font-style: italic; }
+    .bullet-point-title:before {
+      content: "<*> "; }
 
-      body {
-        padding-top: 20px; }
+      .italic {
+        font-style: italic; }
 
-        .personal-info {
-          margin: 40px 0px; }
-          .personal-info .contacts-icons {
-            padding-top: 10px; }
-            .personal-info .contacts-icons a {
-              font-size: 20px;
-              padding-top: 5px;
-              text-align: center;
-              width: 35px;
-              height: 35px;
-              border: 2px solid black;
-              border-radius: 5px;
-              transition: all 0.2s ease-in-out;
-              margin: 5px 3px; }
-              .personal-info .contacts-icons a:hover {
-                color: white;
-                background-color: black; }
-          .personal-info .contacts-lines {
-            margin-top: 10px; }
-            .personal-info .contacts-lines a {
-              margin: 5px 0px; }
-          .personal-info .my-picture {
-            max-width: 300px;
-            max-height: 300px;
-            width: 30vw;
-            height: 30vw;
-            min-width: 170px;
-            min-height: 170px;
-            overflow: hidden;
-            position: relative;
-            border-radius: 100%; }
-            .personal-info .my-picture img {
-              position: absolute;
-              width: 100%; }
-              .personal-info .my-picture .my-image {
-                left: -4%;
-                top: -10%;
-                padding: 20px;
-                transition: all 0.3s ease-in-out;
-                width: 120%; }
-          .personal-info .my-name-ar {
-            margin-bottom: -14px;
-            font-family: 'The_Sans_Arabic', sans-serif;
-            font-weight: bold;
-            font-size: 52px; }
-            .personal-info .my-name-en {
-              text-transform: uppercase;
+        body {
+          padding-top: 20px; }
+
+          .personal-info {
+            margin: 40px 0px; }
+            .personal-info .contacts-icons {
+              padding-top: 10px; }
+              .personal-info .contacts-icons a {
+                font-size: 20px;
+                padding-top: 5px;
+                text-align: center;
+                width: 35px;
+                height: 35px;
+                border: 2px solid black;
+                border-radius: 5px;
+                transition: all 0.2s ease-in-out;
+                margin: 5px 3px; }
+                .personal-info .contacts-icons a:hover {
+                  color: white;
+                  background-color: black; }
+            .personal-info .contacts-lines {
+              margin-top: 10px; }
+              .personal-info .contacts-lines a {
+                margin: 5px 0px; }
+            .personal-info .my-picture {
+              max-width: 300px;
+              max-height: 300px;
+              width: 30vw;
+              height: 30vw;
+              min-width: 170px;
+              min-height: 170px;
+              overflow: hidden;
+              position: relative;
+              border-radius: 100%; }
+              .personal-info .my-picture img {
+                position: absolute;
+                width: 100%; }
+                .personal-info .my-picture .my-image {
+                  left: -4%;
+                  top: -10%;
+                  padding: 20px;
+                  transition: all 0.3s ease-in-out;
+                  width: 120%; }
+            .personal-info .my-name-ar {
+              margin-bottom: -14px;
+              font-family: 'The_Sans_Arabic', sans-serif;
               font-weight: bold;
-              font-size: 30px; }
-              .personal-info .title {
+              font-size: 52px; }
+              .personal-info .my-name-en {
                 text-transform: uppercase;
                 font-weight: bold;
-                font-size: 14px;
-                padding: 4px 7px;
-                background-color: black;
-                color: white; }
-                .personal-info .pattern {
-                  width: 40vw;
-                  height: 13vw;
-                  overflow: hidden;
-                  position: relative; }
-                  .personal-info .pattern img {
-                    position: absolute;
-                    bottom: 0; }
+                font-size: 30px; }
+                .personal-info .title {
+                  text-transform: uppercase;
+                  font-weight: bold;
+                  font-size: 14px;
+                  padding: 4px 7px;
+                  background-color: black;
+                  color: white; }
+                  .personal-info .pattern {
+                    width: 40vw;
+                    height: 13vw;
+                    overflow: hidden;
+                    position: relative; }
+                    .personal-info .pattern img {
+                      position: absolute;
+                      bottom: 0; }
 
   @media only screen and (max-width: 750px) {
     body {

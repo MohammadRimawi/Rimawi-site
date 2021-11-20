@@ -147,7 +147,7 @@ hr {
 
         }
         &:hover {
-            background-color: rgba(124, 21, 21, 0.082);
+            background-color: rgba(0, 0, 0, 0.05);
             &:after{
         
                 bottom: -1px;
@@ -503,11 +503,11 @@ body{
         background-color: black;
         min-width: 2px;
         min-height: 50px;
-        position: relative;
+        // position: relative;
         margin: 0;
         
        
-        left:  calc( #{$left-section-width} - 1px);
+        // left:  calc( #{$left-section-width} - 1px);
     }
 
     .title-container {

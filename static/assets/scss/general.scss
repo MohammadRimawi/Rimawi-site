@@ -136,7 +136,7 @@ hr {
             color: black;
             max-width: 350px;
         }
-        &:after,&:before{
+        &:after{
             content: "";
             position: absolute;
             left: 50%;
@@ -144,19 +144,29 @@ hr {
             width: 0%;
             transition: all .7s ease-in-out;
             background-color: rgba(0, 0, 0, 0.2);;
-
+            bottom: -1px;
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            left: 50%;
+            height: 2px;
+            width: 0%;
+            transition: all .7s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.2);
+            top: -1px;
         }
         &:hover {
             background-color: rgba(0, 0, 0, 0.05);
             &:after{
         
-                bottom: -1px;
+               
                 width: 40%;
                 left: 30%;
                
             }
             &:before{
-                top: -1px;
+                
                 width: 40%;
                 left: 30%;
             }

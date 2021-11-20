@@ -25,7 +25,7 @@ assets.register(bundles)
 def index():
     sections = [{
             "title": "Objective",
-            "description": "A highly disciplined and hard-working individual looking for an internship in backend or other related areas of software development in a well established organization.",
+            "description": """A highly disciplined and hard-working computer science student passionate about creating things, and fascinated with backend development and security.<br><br>Building on 7 years of experience in graphic design, motion graphics and video editing, I’m currently seeking an internship that expands my experience in backend or related areas of software development in a well established organization.""",
             "items": {}
         },
 
@@ -72,7 +72,6 @@ def index():
                         "classes": ["italic"],
                     }, ],
                 },
-# hjhj
             ]
 
         },
@@ -81,7 +80,6 @@ def index():
             "title": "Experiences",
             "description": "",
             "items": [
-
 
                 {
                     "left": [{
@@ -100,12 +98,35 @@ def index():
                         },
                     ],
                     "right": [{
-                            "text": "September 2020  - Onging",
+                            "text": "Treasurer",
+                            "classes": ["bold", "big"],
+                        },
+                        {
+                            "text": "September 2021  - Onging",
                             "classes": ["italic"],
                         },
                         {
-                            "text": "Beginner level instuctor",
+                            "text": "ACM leader board",
+                            #"url": "https://psutsc.acm.org/",
                             "classes": ["bold", "bullet-point-title", "sub-item"],
+                        },
+                        {
+                            "text": "Gamifying problem solving using Codeforces APIs.",
+                            "classes": ["sub-item"]
+                        },
+                    ],
+                }, 
+                                {
+                    "left": [
+                    ],
+                   "right": [
+                        {
+                            "text": "Instuctor",
+                            "classes": ["bold", "big"],
+                        },
+                       {
+                            "text": "September 2020  - June 2021",
+                            "classes": ["italic"],
                         },
                         {
                             "text": "Teaching problem solving, algorithms and data stuctures for beginners in C++.",
@@ -113,23 +134,8 @@ def index():
                         }
                     ],
                 },
-                {
-                    "left": [{
-                            "text": "PSUT ACM Student Chapter",
-                            "url": "https://psutsc.acm.org",
-                            "classes": ["bold", "big"],
-                        },
-                        {
-                            "text": "Committee board member",
-                        },
-                         {
-                            "text":'''ACM Student Chapter in Princess Sumaya
-                                        University for Technology''',
-                            "classes": ["italic","small","grey"],
-
-                        },
-                        
-                    ],
+                 {
+                    "left": [],
                     "right": [{
                             "text": "Board member",
                             "classes": ["bold", "big"],
@@ -148,30 +154,10 @@ def index():
                             "text": "Remaking the website using the new branding colors and themes, and making new features.",
                             "classes": ["sub-item"]
                         },
-                        {
-                            "text": "Treasurer",
-                            "classes": ["bold", "big"],
-                        },
-                        {
-                            "text": "September 2021  - Onging",
-                            "classes": ["italic"],
-                        },
-                        {
-                            "text": "ACM leader board",
-                            #"url": "https://psutsc.acm.org/",
-                            "classes": ["bold", "bullet-point-title", "sub-item"],
-                        },
-                        {
-                            "text": "Gamifying problem solving using Codeforces APIs.",
-                            "classes": ["sub-item"]
-                        },
-
-
-
-
 
                     ],
-                },
+                }, 
+               
                 {
                     "left": [{
                             "text": "Codablity",
@@ -625,6 +611,12 @@ def index():
         "type": "University course"
     }, {
         "name": "C#",
+        "type": "University course"
+    }, {
+        "name": "Node.js",
+        "type": "University course"
+    }, {
+        "name": "React",
         "type": "University course"
     }, ]
     return render_template("home.html",cards=cards,programming_skills=programming_skills,sections=sections)

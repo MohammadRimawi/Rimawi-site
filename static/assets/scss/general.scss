@@ -129,15 +129,38 @@ hr {
 
     .section-item {
         position: relative;
-        margin-top: -10px;
+        transition: all .7s ease-in-out;
 
         p {
             margin: 5px 0;
             color: black;
             max-width: 350px;
         }
+        &:after,&:before{
+            content: "";
+            position: absolute;
+            left: 50%;
+            height: 2px;
+            width: 0%;
+            transition: all .7s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.2);;
 
+        }
         &:hover {
+            background-color: rgba(124, 21, 21, 0.082);
+            &:after{
+        
+                bottom: -1px;
+                width: 40%;
+                left: 30%;
+               
+            }
+            &:before{
+                top: -1px;
+                width: 40%;
+                left: 30%;
+            }
+            // border-bottom: 1px solid black;
             .grey{
                 color: black !important;
             }
@@ -157,6 +180,14 @@ hr {
                 border-width: 0;
                 padding-bottom: 20px;
             }
+
+            .section-item-divider {
+                width: 2px !important;
+                min-width: 2px !important;
+                min-height: 45px;
+                margin: 0;
+                height: fit-content;
+            }
         }
 
         .section-item-left {
@@ -165,8 +196,9 @@ hr {
             justify-content: end;
             padding-right: 50px;
             text-align: right;
+            padding-top: 30px;
             padding-left: 30px;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
             justify-content: flex-start;
 
             .sub-item{
@@ -180,8 +212,9 @@ hr {
             justify-content: start;
             align-items: flex-start;
             padding-left: 50px;
+            padding-top: 30px;
             padding-right: 30px;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
             justify-content: flex-start;
 
             .sub-item{
@@ -195,8 +228,8 @@ hr {
 
 
         .section-item-divider {
-            width: 2px;
-            min-width: 2px;
+            width: 0px;
+            min-width: 0px;
             min-height: 100px;
             height: fit-content;
         }
@@ -204,7 +237,7 @@ hr {
         .section-item-bullet {
             position: absolute;
             left: calc(50% - 10px);
-            top: 5px;
+            top: 35px;
             width: 20px;
             height: 20px;
             border: 2px solid black;
@@ -364,14 +397,12 @@ body{
         }
         
         .my-image{
-            left: -4%;
-            top: -10%;
-            padding: 20px;
-            transition: all .3s ease-in-out;
-            width: 120%;
-            // &:hover{
-            //     padding: 30px;
-            // }
+            padding: 0;
+            height: 120%;
+            bottom: 0;
+            left: 10px;
+            object-fit: cover;
+            transition: all 0.3s ease-in-out;
         }
         
     }
@@ -497,6 +528,7 @@ body{
         }
 
         &:hover {
+   
             .section-item-bullet {
                 border-width: 8px;
             }
@@ -509,6 +541,8 @@ body{
                 border-width: 0;
                 padding-bottom: 20px;
             }
+
+          
         }
 
         .section-item-left {

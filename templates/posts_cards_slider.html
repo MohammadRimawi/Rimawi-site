@@ -385,8 +385,9 @@
             <div class="card  card-descriptive  flex-column">
                 <div class= "card-image">
                     <!-- <img src="{{ url_for('static', filename = card.image_url)}}" alt="" onerror="this.style.display='none'">  TODO Add Alt -->
+                    {% if card['image_url']!= "" %}
                     <img src="{{url_for('static', filename = 'assets/images/'+card['image_url'])}}" alt="" onerror="this.style.display='none'"> 
-                    
+                    {% endif %}
                 </div>
                 
                 <div class= "card-content flex-column">

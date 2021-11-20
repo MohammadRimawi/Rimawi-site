@@ -27,7 +27,7 @@ function next(elm,user=1){
         // slider = (ele.scrollWidth-ele.scrollLeft)-ele.offsetWidth;
         
         ele.scrollLeft-= offset;
-        console.log(ele.scrollLeft)
+        // console.log(ele.scrollLeft)
         setTimeout(()=>{
 
             ele.scroll({
@@ -55,7 +55,7 @@ function next(elm,user=1){
 function previous(elm,user=1){
         
     const ele = elm.parentElement.getElementsByClassName("slider-body")[0];
-    console.log(ele)
+    // console.log(ele)
     if(user){
         ele.classList.remove("shuffle");
     }

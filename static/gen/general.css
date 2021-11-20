@@ -95,28 +95,37 @@
           margin: 5px 0;
           color: black;
           max-width: 350px; }
-          .section .section-item:after, .section .section-item:before {
+          .section .section-item:after {
             content: "";
             position: absolute;
             left: 50%;
             height: 2px;
             width: 0%;
             transition: all 0.7s ease-in-out;
-            background-color: rgba(0, 0, 0, 0.2); }
-            .section .section-item:hover {
-              background-color: rgba(0, 0, 0, 0.05); }
-              .section .section-item:hover:after {
-                bottom: -1px;
-                width: 40%;
-                left: 30%; }
-                .section .section-item:hover:before {
-                  top: -1px;
+            background-color: rgba(0, 0, 0, 0.2);
+            ;
+bottom: -1px; }
+            .section .section-item:before {
+              content: "";
+              position: absolute;
+              left: 50%;
+              height: 2px;
+              width: 0%;
+              transition: all 0.7s ease-in-out;
+              background-color: rgba(0, 0, 0, 0.2);
+              top: -1px; }
+              .section .section-item:hover {
+                background-color: rgba(0, 0, 0, 0.05); }
+                .section .section-item:hover:after {
                   width: 40%;
                   left: 30%; }
-                  .section .section-item:hover .grey {
-                    color: black !important; }
-                    .section .section-item:hover .section-item-bullet {
-                      border-width: 8px; }
+                  .section .section-item:hover:before {
+                    width: 40%;
+                    left: 30%; }
+                    .section .section-item:hover .grey {
+                      color: black !important; }
+                      .section .section-item:hover .section-item-bullet {
+                        border-width: 8px; }
         .section .section-item:last-of-type .section-item-right,
         .section .section-item:last-of-type .section-item-left {
           border-width: 0;

@@ -309,25 +309,27 @@
                       bottom: 0; }
 
   @media only screen and (max-width: 750px) {
-    body {
-      margin: auto !important;
-      width: 95% !important;
-      display: block !important;
-      height: 100% !important;   }
-      .main {
-        margin: auto;
-        width: 100%;   }
-        .nav {
-          width: 90%;
-          font-weight: 600;   }
-          .nav .nav-item {
-            width: 100px;   }
-            .nav .nav-title {
-              font-size: 10px;
-              white-space: nowrap;   }
-              .nav .logo {
-                width: 60px;
-                height: 60px;   }
+    .personal-info .my-picture .my-image {
+      left: 8px;   }
+      body {
+        margin: auto !important;
+        width: 95% !important;
+        display: block !important;
+        height: 100% !important;   }
+        .main {
+          margin: auto;
+          width: 100%;   }
+          .nav {
+            width: 90%;
+            font-weight: 600;   }
+            .nav .nav-item {
+              width: 100px;   }
+              .nav .nav-title {
+                font-size: 10px;
+                white-space: nowrap;   }
+                .nav .logo {
+                  width: 60px;
+                  height: 60px;   }
     hr {
       height: 0;
       border-width: 0;

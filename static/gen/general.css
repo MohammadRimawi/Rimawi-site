@@ -308,14 +308,16 @@ bottom: -1px; }
                   padding: 4px 7px;
                   background-color: black;
                   color: white; }
-                  .personal-info .pattern {
-                    width: 40vw;
-                    height: 13vw;
-                    overflow: hidden;
-                    position: relative; }
-                    .personal-info .pattern img {
-                      position: absolute;
-                      bottom: 0; }
+                  .personal-info .title a {
+                    color: #ff9900; }
+            .personal-info .pattern {
+              width: 40vw;
+              height: 13vw;
+              overflow: hidden;
+              position: relative; }
+              .personal-info .pattern img {
+                position: absolute;
+                bottom: 0; }
 
   @media only screen and (max-width: 750px) {
     .personal-info .my-picture .my-image {

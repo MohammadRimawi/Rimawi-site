@@ -118,13 +118,17 @@ hr {
             background-color: black;
             color: white;
             margin: -2px;
+            
         }
+
+       
     }
 
     .title-container:hover {
         padding-left: 0px;
         padding-right: 5px;
     }
+
 
 
     .section-item {
@@ -438,6 +442,9 @@ body{
         padding: 4px 7px ;
         background-color: black;
         color: white;
+        a {
+            color:#ff9900;
+        }
     }
     .pattern{
         width: 40vw;

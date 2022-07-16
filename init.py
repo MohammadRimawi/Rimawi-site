@@ -25,7 +25,7 @@ assets.register(bundles)
 def index():
     sections = [{
             "title": "Objective",
-            "description": """A highly disciplined and hard-working computer science student passionate about creating things, and fascinated with backend development and security.<br><br>Building on 7 years of experience in graphic design, motion graphics and video editing, I’m currently seeking an internship that expands my experience in backend or related areas of software development in a well established organization.""",
+            "description": """A highly disciplined and hard-working computer science student passionate about creating things, and fascinated with backend development and security.<br><br>With 7 years of experience in graphic design, motion graphics and video editing.""", # I’m currently seeking an internship that expands my experience in backend or related areas of software development in a well established organization.""",
             "items": {}
         },
 
@@ -47,11 +47,11 @@ def index():
                             "classes": ["italic"],
                         },
                         {
-                            "text": "GPA: Very good with 82.2"
+                            "text": "GPA: Very good with 83.9"
                         },
 
                         {
-                            "text": "ranking 6<sup>th</sup> in cohort of 59 students."
+                            "text": "ranking 7<sup>th</sup> in cohort of 69 students."
                         },
 
                     ],
@@ -80,6 +80,27 @@ def index():
             "title": "Experiences",
             "description": "",
             "items": [
+                    {
+                    "left": [{
+                            "text": "Amazon",
+                            "url": "https://Amazon.com/",
+                            "classes": ["bold", "big"],
+                        },
+                        {
+                            "text": "Software Development Engineer Intern",
+                        },
+                         
+
+
+                    ],
+                    "right": [{
+                            "text": "July 2022 - October 2022",
+                            "classes": ["italic"],
+                        },
+                        
+
+                    ],
+                },
 
                 {
                     "left": [{
@@ -174,7 +195,6 @@ def index():
                             through programming.
                             ''',
                             "classes": ["italic", "small","grey"],
-                            #TODO add small
                         }
                     ],
                     "right": [{
@@ -218,7 +238,6 @@ def index():
                         },
                         {
                             "text": "Video editing automation",
-                            #"url": "https://www.psut.edu.jo",
                             "classes": ["bold", "bullet-point-title", "sub-item"],
                         },
                         {
@@ -292,7 +311,6 @@ def index():
                         
                         {
                             "text": "Amazon Teckathon - Jordan",
-                            #TODO add link here
                             "url":"https://www.amazonteckathon.com/",
                             "classes": ["bold", "big"],
                         },
@@ -344,7 +362,6 @@ def index():
                     "right": [
                         {
                             "text": "Amman Collegiate Programming Contest",
-                            # "url": "https://www.tedxpsut.com/",
                             "classes": ["bold", "big"],
                         },
                         
@@ -362,7 +379,6 @@ def index():
                     }, ],
                     "right": [{
                             "text": "Startup Weekend Amman - SDG Version",
-                            #"url": "https://www.tedxpsut.com/",
                             "classes": ["bold", "big"],
                         },
 
@@ -433,6 +449,19 @@ def index():
         }],
         "url": "",
         "youtube": ""
+    },{
+        "title": "API HeartBeat",
+        "description": "Android mobile application that pings routes over HTTP/HTTPS and returns the status code or REST IN PEACE if the route is unreachable.",
+        "image_url": "",
+
+        "type": "University project",
+        "languages": ["Kotlin", "SQLite"],
+        "github": [{
+            "type":"Project",
+            "url": "https://github.com/MohammadRimawi/API-HeartBeat"
+        }],
+        "url": "",
+        "youtube": ""
     }, {
         "title": "Grade Tracker",
         "description": "Website that calculates my GPA and offer tools and insights for performance.",
@@ -450,7 +479,7 @@ def index():
         "title": "AI Garbage Classification",
         # "description": "A platform for Arabian poets A platform for Arabian poets",
         "image_url": "ai.jpg",
-        "type": "Univesity project",
+        "type": "university project",
         "languages": ["Flask", "Flutter", "MySQL", "Python", "Tensorflow"],
         "github": [{
             "type": "Project",
@@ -462,7 +491,7 @@ def index():
         "title": "RimawiBank",
         # "description": "A platform for Arabian poets A platform for Arabian poets",
         "image_url": "",
-        "type": "Univesity project",
+        "type": "university project",
         "languages": ["C#", "SQLite"],
         "github": [{
             "type": "Project",
@@ -503,7 +532,7 @@ def index():
         "title": "Aghradi",
         # "description": "A platform for Arabian poets A platform for Arabian poets",
         "image_url": "Aghradi.png",
-        "type": "Univesity project",
+        "type": "university project",
         "languages": ["PHP", "MySQL", "HTML", "CSS", "Javascipt"],
         "github": [{
             "type": "Project",
@@ -515,7 +544,7 @@ def index():
         "title": "Graph Editor",
         # "description": "A platform for Arabian poets A platform for Arabian poets",
         "image_url": "",
-        "type": "Univesity project",
+        "type": "university project",
         "languages": ["HTML", "CSS", "Javascipt"],
         "github": [{
             "type": "Project",
@@ -603,6 +632,9 @@ def index():
     }, {
         "name": "Flask",
         "type": "self-taught"
+    },{
+        "name": "FastAPI",
+        "type": "self-taught"
     }, {
         "name": "Flutter",
         "type": "self-taught"
@@ -613,12 +645,15 @@ def index():
         "name": "C#",
         "type": "University course"
     }, {
-        "name": "Node.js",
+        "name": "NodeJS",
         "type": "University course"
     }, {
-        "name": "React",
+        "name": "ReactJS",
         "type": "University course"
-    }, ]
+    },  {
+        "name": "Android/Kotlin",
+        "type": "University course"
+    },]
     return render_template("home.html",cards=cards,programming_skills=programming_skills,sections=sections)
 
 

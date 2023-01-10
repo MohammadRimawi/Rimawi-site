@@ -59,7 +59,7 @@ def index():
                             "classes": ["italic"],
                         },
                         {"text": "GPA: Very good with 83.9"},
-                        {"text": "ranking 7<sup>th</sup> in cohort of 69 students."},
+                        {"text": "ranking 5<sup>th</sup> in cohort of 62 students."},
                     ],
                 },
                 {

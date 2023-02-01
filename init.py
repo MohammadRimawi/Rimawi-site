@@ -58,7 +58,7 @@ def index():
                             "text": "August 2018 - Expected January 2023",
                             "classes": ["italic"],
                         },
-                        {"text": "GPA: Very good with 83.9"},
+                        {"text": "GPA: Excellent with 84%"},
                         {"text": "ranking 5<sup>th</sup> in cohort of 62 students."},
                     ],
                 },
